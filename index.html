@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="header">
+        <img src="images/Neu.png.png" alt="Logo" class="logo">
+    </div>
+    <div class="container">
+        <h2>Sign In</h2>
+        <form id="loginForm">
+            <label for="username">Username/Email</label>
+            <input type="text" id="username" name="username" placeholder="Enter your username or email" required>
+            
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" placeholder="Enter your password" required>
+            
+            <button type="submit">Sign In</button>
+            
+            <div class="options">
+                <a href="#" id="forgotPassword">Forgot Password?</a>
+                
+                <label>
+                    <input type="checkbox" id="rememberMe">
+                    Remember Me
+                </label>
+            </div>
+        </form>
+        
+        <div class="social-login">
+            <button class="sign-in-btn google-btn" id="googleSignIn">
+                <img src="images/th.jfif" alt="Google Logo" class="social-logo">
+                Sign in with Google
+            </button>
+            
+            <button class="sign-in-btn facebook-btn" id="facebookSignIn">
+                <img src="images/facebook.png" alt="Facebook Logo" class="social-logo">
+                Sign in with Facebook
+            </button>
+        </div>
+        
+        <p>Don't have an account? <a href="signup.html">Sign up here</a></p>
+        
+        <!-- Privacy Notice -->
+        <div class="privacy-notice">
+            <p>By using this service, you agree to our 
+                <a href="https://neu.edu.ph/main/datapriv.html" class="privacy-link">Privacy Policy</a> and 
+                <a href="https://neu.edu.ph/main/datapriv.html" class="privacy-link">Terms of Service</a>.
+            </p>
+        </div>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>

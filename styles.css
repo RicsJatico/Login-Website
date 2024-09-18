@@ -1,0 +1,272 @@
+body, h1, h2, p, form, button {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: url('images/neunew.jfif') no-repeat center center fixed; 
+    background-size: cover;
+    color: #f0f0f0; 
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    height: 100vh; 
+    margin: 0;
+    padding: 0;
+    position: relative;
+    cursor: url('images/futuristic-cursor.png'), auto; 
+}
+
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); 
+    z-index: -1; 
+}
+
+.container {
+    max-width: 450px;
+    margin: 5% auto;    
+    padding: 30px;
+    background: rgba(0, 0, 0, 0.6); 
+    border-radius: 12px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    backdrop-filter: blur(6px); 
+    position: relative;
+    z-index: 1; 
+    text-align: left; 
+}
+
+
+.header {
+    position: absolute;
+    top: 20px; 
+    left: 20px;
+}
+
+.logo {
+    max-width: 120px; 
+    height: auto;
+}
+
+
+h2 {
+    margin-bottom: 20px;
+    color: #e0e0e0;
+    font-size: 26px; 
+    font-weight: 700; 
+    text-shadow: none;
+}
+
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 5px;
+    font-weight: 500;
+    color: #b0b0b0; 
+    font-size: 16px;
+}
+
+
+input {
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc; 
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.1); 
+    color: #f0f0f0; 
+    font-size: 16px; 
+    backdrop-filter: blur(2px); 
+    position: relative; 
+    overflow: hidden; 
+}
+
+
+input::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%; 
+    background: rgba(255, 255, 255, 0.2);
+    transform: scale(0);
+    transition: transform 0.4s ease, background 0.4s ease;
+    z-index: 0;
+}
+
+input:focus::before {
+    transform: scale(1);
+    background: rgba(255, 255, 255, 0.3);
+}
+
+/* Button styling */
+button {
+    padding: 14px;
+    background: #4a00e0; 
+    color: white;
+    border: none;
+    border-radius: 8px; 
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease; 
+    position: relative;
+    overflow: hidden; 
+}
+
+
+button::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    transform: scale(0);
+    transition: transform 0.4s ease;
+    z-index: 0;
+}
+
+button:active::before {
+    transform: scale(1); 
+}
+
+/* Button hover effects */
+button:hover {
+    background: #6a00c2;
+    transform: translateY(-2px);
+}
+
+/* Options section styling */
+.options {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    margin-top: 15px;
+}
+
+/* Social login section styling */
+.social-login {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.or-container {
+    display: flex;
+    justify-content: center; 
+    margin-bottom: 20px;
+}
+
+.or-text {
+    font-size: 18px; 
+    color: #d0d0d0;
+    font-weight: 500; 
+    text-shadow: none;
+}
+
+/* Align buttons to the left */
+.sign-in-btn {
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    border: 1px solid #ccc; 
+    border-radius: 8px; 
+    background: rgba(255, 255, 255, 0.1); 
+    color: #f0f0f0; 
+    cursor: pointer;
+    font-size: 16px;
+    margin-bottom: 10px;
+    transition: background 0.3s ease, transform 0.2s ease; /* Smooth transition effects */
+    text-align: left; 
+    width: 100%; /* Full width buttons */
+    box-sizing: border-box; /* Include padding and border in total width and height */
+    backdrop-filter: blur(2px); /* Slight blur effect */
+}
+
+.sign-in-btn:hover {
+    background: rgba(255, 255, 255, 0.2); /* Darker background on hover */
+    transform: translateY(-2px); /* Slight lift effect on hover */
+}
+
+.google-btn {
+    border-color: #ccc; /* Lighter border for Google button */
+}
+
+.facebook-btn {
+    border-color: #ccc; /* Lighter border for Facebook button */
+}
+
+/* Social logo styling */
+.social-logo {
+    width: 24px; 
+    height: auto;
+    vertical-align: middle; 
+    margin-right: 10px; 
+}
+
+/* Forgot password link styling */
+#forgotPassword {
+    display: inline-block; 
+    margin: 0; 
+    color: #2959db; 
+    text-decoration: none;
+    font-weight: 500;
+}
+
+#forgotPassword:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+/* Privacy Notice Styling */
+.privacy-notice {
+    margin-top: 20px; 
+    font-size: 14px; 
+    color: #b0b0b0; 
+    text-align: center; 
+    border-top: 1px solid rgba(255, 255, 255, 0.3); 
+    padding-top: 10px; /* Space above text */
+}
+
+.privacy-notice p {
+    margin: 0; /* Remove default margin */
+}
+
+
+.privacy-link {
+    color: #4a00e0; /* Matching link color */
+    text-decoration: none; 
+    font-weight: 500; /* Medium weight */
+    transition: color 0.3s ease; /* 
+}
+    
+
+.privacy-link:hover {
+    text-decoration: underline; 
+    color: #6a00c2; /* Change color on hover */
+}
+
+
+/* Media query for responsiveness */
+@media (max-width: 600px) {
+    .container {
+        width: 90%;
+        padding: 15px;
+    }
+
+    button {
+        font-size: 14px;
+    }
+}
